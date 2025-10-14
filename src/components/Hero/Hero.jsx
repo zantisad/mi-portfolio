@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import avatar from "../../assets/avatar.jpg";
+import avatar from "../../assets/covers/avatar.jpg"
 
 const Hero = () => {
   return (
@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="container hero-grid">
         <div className="hero-left">
           <h1 className="hero-title">
-            Hola, soy <span className="gradient">Santiago Gonzalez</span> 👋
+            Hola, soy <span className="gradient">Santiago Gonzalez</span>
           </h1>
           <p className="hero-sub muted">
             Frontend Developer especializado en React. Carrera terminada en{" "}
