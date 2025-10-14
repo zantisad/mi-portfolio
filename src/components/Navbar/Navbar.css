@@ -1,0 +1,19 @@
+.navbar{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: blur(8px);
+  background: rgba(13,17,23,.6);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  list-style:none; padding:12px 0; margin:0;
+}
+.logo{ font-weight:700; letter-spacing:.4px; display:flex; align-items:center; gap:10px; }
+.nav-actions{ display:flex; align-items:center; gap:14px; }
+.nav-link{ padding:8px 10px; border-radius:10px; color:var(--text); }
+.nav-link:hover{ background:rgba(255,255,255,.04); }
+.menu-hamburguesa{ display:none; font-size:22px; }
+@media (max-width:780px){
+  .nav-link{ display:none; }
+  .menu-hamburguesa{ display:inline-block; }
+}
