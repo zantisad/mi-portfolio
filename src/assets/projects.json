@@ -3,7 +3,7 @@
   "id": 1,
   "title": "Ecommerce de Ebooks",
   "description": "Landing page creada con HTML y Tailwind para la venta de ebooks. Incluye diseño responsivo, estructura optimizada para conversión, y secciones como beneficios, problemas comunes, compra y FAQ. Fue una página real que utilicé para vender ebooks. La idea era crear algo rápido y fácil por lo que me decidí por no usar muchas tecnologias.",
-  "image": "src/assets/covers/ecommerce-ebooks.png",
+  "image": "ecommerce-ebooks.png",
   "tags": ["HTML", "Tailwind", "Landing Page"],
   "url": "https://mimejoryo.github.io/mi-mejor-yo/?fbclid=PAZXh0bgNhZW0CMTEAAaftA4wNqwDa0pd39flB9n1e0ceQukIMreyuzu31KxeAKPJHbOpfNK8s5TdXHQ_aem_LZYU1GEbh3dMf12pkJ-bhQ", 
   "repo": "https://github.com/mimejoryo/mi-mejor-yo"
@@ -13,7 +13,7 @@
     "id": 2,
     "title": "Lista de Tareas",
     "description": "Proyecto creado con React, que permite agregar, completar y eliminar tareas en tiempo real. La app está construida con una arquitectura basada en componentes reutilizables, manejo global del estado con Context API, y estilos modulares con CSS. Ideal para organizar actividades diarias con una interfaz simple. Lo hice con el objetivo de darle un uso personal.",
-    "image": "src/assets/covers/todoapp.png",
+    "image": "todoapp.png",
     "tags": ["React", "Reducer", "ContextAPI"],
     "url": "https://zantisad.github.io/TasksList/",
     "repo": "https://github.com/zantisad/TasksList"

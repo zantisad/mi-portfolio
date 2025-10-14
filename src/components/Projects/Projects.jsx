@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./Projects.css";
 import projectsList from "../../assets/projects.json";
 
+const coverUrl = (fileName) =>
+  `${import.meta.env.BASE_URL}covers/${fileName}`;
+
 const Projects = () => {
   const [projects, setProjects] = useState([]);
 
@@ -12,8 +15,10 @@ const Projects = () => {
   return (
     <div id="projects" className="section">
       <div className="container">
-        <h2 className="section-title"><i className="bi bi-grid-3x3"></i> Proyectos</h2>
-        <p className="muted" style={{marginBottom:16}}>
+        <h2 className="section-title">
+          <i className="bi bi-grid-3x3"></i> Proyectos
+        </h2>
+        <p className="muted" style={{ marginBottom: 16 }}>
           Selección de proyectos recientes. Código limpio, componentes reutilizables y diseño prolijo.
         </p>
 
@@ -21,7 +26,13 @@ const Projects = () => {
           {projects.map((p) => (
             <div className="project-card card" key={p.id}>
               <div className="project-img">
-                <img src={p.image} alt={p.title} />
+                <img
+                  src={coverUrl(p.image)}
+                  alt={p.title}
+                  onError={(e) => {
+                    e.currentTarget.src = `${import.meta.env.BASE_URL}covers/placeholder.jpg`;
+                  }}
+                />
               </div>
 
               <div className="project-info">
@@ -29,7 +40,9 @@ const Projects = () => {
                 <p className="text-body muted">{p.description}</p>
 
                 <div className="project-tags">
-                  {p.tags?.map((t) => <span key={t} className="badge">{t}</span>)}
+                  {p.tags?.map((t) => (
+                    <span key={t} className="badge">{t}</span>
+                  ))}
                 </div>
 
                 <div className="project-actions">
@@ -47,12 +60,11 @@ const Projects = () => {
               </div>
 
               <div className="project-footer">
-                <span className="text-title">#{String(p.id).padStart(2,'0')}</span>
+                <span className="text-title">#{String(p.id).padStart(2, "0")}</span>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </div>
   );
